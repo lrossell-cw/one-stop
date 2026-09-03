@@ -5,16 +5,44 @@ an inter-hall fiber run tracker.
 
 ## Running it
 
+Needs **Node 22.5 or newer** (the store uses the built-in `node:sqlite`, added
+in 22.5) and `python3` for the one-off color extraction. Check with `node -v`.
+
 ```bash
-npm install          # required — see "Dependencies" below
+npm install          # pulls Express/React/Vite, links the shared workspace
 npm run colors       # recover the occupancy legend from the cutsheet PDF
-npm run ingest       # optional: write data/generated/circuits.json + a report
 npm run dev          # API on :5174, UI on :5173
-npm test             # 59 tests, no registry or browser needed
+```
+
+Then open **http://localhost:5173**.
+
+`npm run colors` is not optional on a fresh clone: `data/generated/` is
+gitignored, and without the color sidecar every hop falls back to
+`INVESTIGATE`. You only need to re-run it when the cutsheet is re-exported.
+The app will tell you if it is missing — the warning banner says so.
+
+Other commands:
+
+```bash
+npm test             # 60 tests, no registry or browser needed
+npm run ingest       # optional: write data/generated/circuits.json + a report
+npm run dev:server   # API only
+npm run dev:web      # UI only (expects the API on :5174)
 ```
 
 The Vite dev server proxies `/api` to the Express server, so both run
 same-origin and there is no CORS to configure.
+
+### If something goes wrong
+
+- **`DatabaseSync is not a constructor`** — Node is older than 22.5.
+- **"Could not reach the API"** in the UI — the Express server isn't up; start
+  it with `npm run dev:server` and check nothing else holds port 5174.
+- **Everything shows INVESTIGATE** — you skipped `npm run colors`.
+- **`Cannot find package '@one-stop/shared'`** — the workspace link is missing;
+  `rm -rf node_modules && npm install` from the repo root fixes it.
+- The store lives at `server/data/one-stop.db`. Delete it to reset every
+  manually-set status back to the cutsheet-derived defaults.
 
 ## How the data flows
 
