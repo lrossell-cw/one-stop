@@ -1,40 +1,52 @@
 import { STATUS_COLORS, STATUS_LABELS, OCCUPANCY_LABELS } from '../site.js';
 
 /**
- * The per-circuit-hop detail panel for a selected map segment.
+ * Per-hop detail for the circuit selected on the map.
  *
- * The map segment is an aggregate of many runs, so status is set here, on the
- * individual run -- which is the thing that actually gets patched. Clicking a
- * row cycles UP -> DOWN -> INVESTIGATE with no animation: the row just
- * switches color.
+ * The map answers "is this run up, end to end" with one colour. This panel is
+ * where that verdict is broken back down into the three hops, because a hop is
+ * the thing that actually gets patched -- so it is also the thing you click to
+ * change. Clicking cycles UP -> DOWN -> INVESTIGATE with no animation: the row
+ * just switches colour.
  */
-export default function SegmentPanel({ segment, onCycle, onClear, busyKey }) {
-  if (!segment) {
+export default function SegmentPanel({ run, onCycle, onClear, onClose, busyKey }) {
+  if (!run) {
     return (
       <aside className="panel panel--empty">
-        <p>Select a fiber segment on the map to see the runs it carries.</p>
+        <p>Select a run on the map to see its hops.</p>
       </aside>
     );
   }
 
-  const rows = [...segment.hops].sort((a, b) =>
-    a.circuit.label.localeCompare(b.circuit.label, 'en', { numeric: true }));
+  const { circuit } = run;
 
   return (
     <aside className="panel">
       <header className="panel-head">
-        <h2>{segment.from} &harr; {segment.to}</h2>
+        <div className="panel-title">
+          <h2>{circuit.label}</h2>
+          <button type="button" className="link-button" onClick={onClose}>clear</button>
+        </div>
         <p className="panel-sub">
-          {segment.total} run{segment.total === 1 ? '' : 's'}
-          {segment.down > 0 && <> &middot; <b className="text-down">{segment.down} down</b></>}
-          {segment.investigate > 0 && (
-            <> &middot; <b className="text-investigate">{segment.investigate} to verify</b></>
-          )}
+          <span
+            className="verdict"
+            style={{ background: STATUS_COLORS[run.status] }}
+          >
+            {STATUS_LABELS[run.status]}
+          </span>
+          {' '}end to end &middot; {run.nodes.join(' → ')}
         </p>
+        {run.built < circuit.hops.length && (
+          <p className="panel-note">
+            {circuit.hops.length - run.built} hop
+            {circuit.hops.length - run.built === 1 ? '' : 's'} not built &mdash;
+            ports open past {run.nodes[run.nodes.length - 1]}.
+          </p>
+        )}
       </header>
 
       <ul className="run-list">
-        {rows.map(({ circuit, hop }) => {
+        {circuit.hops.map((hop) => {
           const key = `${circuit.id}::${hop.id}`;
           return (
             <li key={key} className="run">
@@ -50,11 +62,7 @@ export default function SegmentPanel({ segment, onCycle, onClear, busyKey }) {
               </button>
 
               <div className="run-body">
-                <div className="run-label">
-                  {circuit.label}
-                  {circuit.isCondemned && <span className="tag tag--bad">do not use</span>}
-                  {circuit.isSpare && <span className="tag">spare</span>}
-                </div>
+                <div className="run-label">{hop.from} &harr; {hop.to}</div>
                 <div className="run-path">
                   <Endpoint end={hop.a} fallbackNode={hop.from} />
                   <span className="run-arrow">&rarr;</span>
@@ -78,12 +86,13 @@ export default function SegmentPanel({ segment, onCycle, onClear, busyKey }) {
                     </>
                   )}
                 </div>
-                {circuit.notes && <div className="run-note">{circuit.notes}</div>}
               </div>
             </li>
           );
         })}
       </ul>
+
+      {circuit.notes && <p className="run-note panel-notes">{circuit.notes}</p>}
     </aside>
   );
 }

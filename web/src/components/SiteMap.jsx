@@ -3,20 +3,23 @@ import { ROOMS, SITE_VIEWBOX, STATUS_COLORS, STATUS_LABELS } from '../site.js';
 /**
  * Whole-site map with the fiber overlay.
  *
- * Segments are drawn from each hop's real `from`/`to` nodes, grouped by the
- * pair of rooms they actually connect. Re-patch a circuit to a different hall
- * and it moves to a different group, so the picture follows the data rather
- * than a fixed set of lines.
+ * The visual view draws each circuit as ONE continuous line from the MMR to
+ * wherever it terminates, coloured by its worst hop -- the same reading as the
+ * colour on the sheet. Which hop is at fault is the cutsheet's job; here the
+ * question is "is this run up, end to end".
  *
- * `segments` is grouped once by App and passed in, so the map and the detail
- * panel are guaranteed to be looking at the same objects and the same keys.
+ * The geometry still comes from real endpoints at every step, so re-patching a
+ * circuit into a different hall redraws its line through the new room.
+ *
+ * `runs` is computed once by App and passed in, so the map and the detail panel
+ * are always looking at the same objects.
  */
 export default function SiteMap({
-  segments,
+  runs,
   showFiber,
   onSelectHall,
-  onSelectSegment,
-  selectedSegment,
+  onSelectRun,
+  focusId,
 }) {
   return (
     <svg
@@ -39,23 +42,31 @@ export default function SiteMap({
       */}
       {showFiber && (
         <g className="fiber-layer">
-          {segments.map((seg) => {
-            if (!seg.path) return null;
-            const isSelected = selectedSegment === seg.key;
+          {runs.map((run) => {
+            if (!run.d) return null;
+            const dim = focusId && focusId !== run.id;
             return (
-              <g key={seg.key} className="fiber-segment">
+              <g key={run.id} className="fiber-run">
                 <path
-                  d={seg.path}
+                  d={run.d}
                   className="fiber-hitbox"
-                  onClick={() => onSelectSegment(seg)}
+                  onClick={() => onSelectRun(run.id)}
                 />
                 <path
-                  d={seg.path}
-                  className={`fiber-path ${isSelected ? 'is-selected' : ''}`}
-                  stroke={STATUS_COLORS[seg.status]}
-                  strokeDasharray={seg.status === 'NOT_RUN' ? '6 5' : undefined}
+                  d={run.d}
+                  className={[
+                    'fiber-path',
+                    focusId === run.id ? 'is-selected' : '',
+                    dim ? 'is-dim' : '',
+                  ].join(' ')}
+                  stroke={STATUS_COLORS[run.status]}
                   pointerEvents="none"
-                />
+                >
+                  <title>
+                    {`${run.label}: ${STATUS_LABELS[run.status]} — `
+                     + `${run.nodes.join(' → ')}`}
+                  </title>
+                </path>
               </g>
             );
           })}
@@ -93,55 +104,6 @@ export default function SiteMap({
         );
       })}
 
-      {/* Badges last, so a count is never hidden under a room. */}
-      {showFiber && (
-        <g className="badge-layer" pointerEvents="none">
-          {segments.map((seg) => (seg.path ? <SegmentBadge key={seg.key} segment={seg} /> : null))}
-        </g>
-      )}
     </svg>
   );
-}
-
-/** Count bubble at the midpoint of a segment. */
-function SegmentBadge({ segment }) {
-  const anchor = midpointOf(segment.path);
-  if (!anchor) return null;
-
-  const label = segment.down > 0
-    ? `${segment.down}/${segment.total}`
-    : String(segment.total);
-
-  return (
-    <g className="segment-badge">
-      <rect
-        x={anchor.x - 15} y={anchor.y - 9}
-        width="30" height="18" rx="9"
-        fill={STATUS_COLORS[segment.status]}
-      />
-      <text x={anchor.x} y={anchor.y} textAnchor="middle" dominantBaseline="central">
-        {label}
-      </text>
-      <title>
-        {`${segment.from} to ${segment.to}: ${segment.total} run(s), `
-         + `${STATUS_LABELS[segment.status]}`}
-      </title>
-    </g>
-  );
-}
-
-/**
- * Rough midpoint of a path, taken from its coordinate pairs. Good enough for
- * badge placement and avoids needing a live DOM node to measure.
- */
-function midpointOf(d) {
-  if (!d) return null;
-  const nums = d.match(/-?\d+(?:\.\d+)?/g);
-  if (!nums || nums.length < 4) return null;
-
-  const pts = [];
-  for (let i = 0; i + 1 < nums.length; i += 2) {
-    pts.push({ x: Number(nums[i]), y: Number(nums[i + 1]) });
-  }
-  return pts[Math.floor(pts.length / 2)];
 }

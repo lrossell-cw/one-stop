@@ -1,6 +1,42 @@
 import { useMemo } from 'react';
 import { cutsheetRows } from '@one-stop/shared/cutsheet';
+import { HOP_IDS } from '@one-stop/shared/model';
 import { CUTSHEET_TABS, STATUS_COLORS, STATUS_LABELS } from '../site.js';
+
+/**
+ * Three connected segments showing the whole run, with this row's hop drawn
+ * thicker. The map answers "is the run up"; here you want the opposite -- which
+ * of the three hops is the bad one, without reading three separate rows.
+ */
+function HopStrip({ hops, activeHopId }) {
+  const W = 78;
+  const seg = 22;
+  const gap = (W - seg * 3) / 2;
+
+  return (
+    <svg className="hop-strip" viewBox={`0 0 ${W} 12`} role="img"
+         aria-label={hops.map((h) => `${h.id} ${STATUS_LABELS[h.status]}`).join(', ')}>
+      {hops.map((hop, i) => {
+        const x = i * (seg + gap);
+        const active = hop.id === activeHopId;
+        return (
+          <g key={hop.id}>
+            <line
+              x1={x} y1="6" x2={x + seg} y2="6"
+              stroke={STATUS_COLORS[hop.status]}
+              strokeWidth={active ? 4 : 2}
+              strokeLinecap="round"
+              strokeDasharray={hop.status === 'NOT_RUN' ? '3 3' : undefined}
+            />
+            {i < hops.length - 1 && (
+              <circle cx={x + seg + gap / 2} cy="6" r="1.6" className="hop-joint" />
+            )}
+          </g>
+        );
+      })}
+    </svg>
+  );
+}
 
 /**
  * Tabular circuit data, one tab per hall plus the whole site.
@@ -11,6 +47,16 @@ import { CUTSHEET_TABS, STATUS_COLORS, STATUS_LABELS } from '../site.js';
  */
 export default function CutsheetView({ circuits, hall, onSelectHall, onCycle, busyKey }) {
   const rows = useMemo(() => cutsheetRows(circuits, hall), [circuits, hall]);
+
+  // Every hop of every circuit, so a row can draw the whole run it belongs to
+  // and not just its own segment.
+  const hopsByCircuit = useMemo(() => {
+    const map = new Map();
+    for (const c of circuits) {
+      map.set(c.id, HOP_IDS.map((id) => c.hops.find((h) => h.id === id)).filter(Boolean));
+    }
+    return map;
+  }, [circuits]);
 
   const counts = useMemo(() => {
     const out = { ALL: cutsheetRows(circuits, null).length };
@@ -57,6 +103,7 @@ export default function CutsheetView({ circuits, hall, onSelectHall, onCycle, bu
           <thead>
             <tr>
               <th scope="col">Status</th>
+              <th scope="col">Run</th>
               <th scope="col">Circuit</th>
               <th scope="col">Hop</th>
               <th scope="col">A-side</th>
@@ -84,6 +131,12 @@ export default function CutsheetView({ circuits, hall, onSelectHall, onCycle, bu
                     {STATUS_LABELS[row.status]}
                     {row.overridden && <span className="pill-dot" aria-label="set by hand" />}
                   </button>
+                </td>
+                <td className="cell-strip">
+                  <HopStrip
+                    hops={hopsByCircuit.get(row.circuitId) ?? []}
+                    activeHopId={row.hopId}
+                  />
                 </td>
                 <td className="cell-circuit">
                   {row.circuitLabel}

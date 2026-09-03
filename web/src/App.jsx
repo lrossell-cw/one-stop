@@ -4,7 +4,7 @@ import SiteMap from './components/SiteMap.jsx';
 import SegmentPanel from './components/SegmentPanel.jsx';
 import HallView from './components/HallView.jsx';
 import CutsheetView from './components/CutsheetView.jsx';
-import { groupSegments } from './segments.js';
+import { wholeLine } from './segments.js';
 import { HALLS, STATUS_COLORS, STATUS_LABELS } from './site.js';
 
 /** Last path segment, for displaying a source path without the machine's tree. */
@@ -22,7 +22,7 @@ export default function App() {
   // the visual view into a HallView for a room that does not exist.
   const [zoomedHall, setZoomedHall] = useState(null);
   const [cutsheetTab, setCutsheetTab] = useState(null);
-  const [segmentKey, setSegmentKey] = useState(null);
+  const [focusId, setFocusId] = useState(null);
   const [busyKey, setBusyKey] = useState(null);
 
   const refresh = useCallback(async () => {
@@ -67,13 +67,24 @@ export default function App() {
     }
   }, [refresh]);
 
-  // Rebuilt from fresh data each render, so the panel tracks the latest state
-  // rather than holding a stale snapshot of the segment it was opened with.
-  // Shares groupSegments with the map so the two can never disagree on a key.
-  const segments = useMemo(() => groupSegments(circuits), [circuits]);
-  const segmentList = useMemo(() => [...segments.values()], [segments]);
+  // One whole line per circuit, for the visual view. Fanned slightly so
+  // circuits sharing a path don't stack into a single stroke. Rebuilt from
+  // fresh data each render, so the panel never shows a stale snapshot of the
+  // run it was opened with.
+  const runs = useMemo(() => circuits.map((circuit, i) => {
+    const line = wholeLine(circuit, { offset: ((i % 7) - 3) * 4 });
+    return {
+      id: circuit.id,
+      label: circuit.label,
+      circuit,
+      d: line.d,
+      status: line.status,
+      nodes: line.nodes,
+      built: line.built,
+    };
+  }), [circuits]);
 
-  const selectedSegment = segmentKey ? segments.get(segmentKey) ?? null : null;
+  const focused = focusId ? runs.find((r) => r.id === focusId) ?? null : null;
 
   const totals = useMemo(() => {
     const out = { UP: 0, DOWN: 0, INVESTIGATE: 0, NOT_RUN: 0 };
@@ -172,16 +183,17 @@ export default function App() {
         {view === 'visual' && !zoomedHall && (
           <>
             <SiteMap
-              segments={segmentList}
+              runs={runs}
               showFiber={showFiber}
               onSelectHall={(id) => HALLS.includes(id) && setZoomedHall(id)}
-              onSelectSegment={(seg) => setSegmentKey(seg.key)}
-              selectedSegment={segmentKey}
+              onSelectRun={setFocusId}
+              focusId={focusId}
             />
             <SegmentPanel
-              segment={selectedSegment}
+              run={focused}
               onCycle={cycle}
               onClear={clear}
+              onClose={() => setFocusId(null)}
               busyKey={busyKey}
             />
           </>

@@ -150,8 +150,12 @@ h1 { font-size: 20px; margin: 0; }
   /* No transition: a status change switches color instantly, by design. */
 }
 .fiber-path.is-selected { stroke-width: 6; }
+/* Dimming is opacity only, so a dimmed run keeps its status colour. */
+.fiber-path.is-dim { opacity: 0.18; }
 
-.segment-badge text { font-size: 10px; font-weight: 700; fill: #fff; }
+.hop-strip { width: 78px; height: 12px; display: block; }
+.hop-joint { fill: #7b8794; }
+.cell-strip { width: 90px; }
 
 /* --- Panel ----------------------------------------------------------------- */
 
@@ -165,7 +169,18 @@ h1 { font-size: 20px; margin: 0; }
 .panel--empty { padding: 20px; color: var(--muted); }
 .panel-head { padding: 14px 16px; border-bottom: 1px solid var(--line); }
 .panel-head h2 { margin: 0; font-size: 15px; }
-.panel-sub { margin: 3px 0 0; color: var(--muted); font-size: 12.5px; }
+.panel-title { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.panel-sub { margin: 5px 0 0; color: var(--muted); font-size: 12.5px; }
+.panel-note { margin: 5px 0 0; color: #8a7330; font-size: 12px; }
+.panel-notes { margin: 12px 14px; }
+.verdict {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+}
 .text-down { color: var(--down); }
 .text-investigate { color: #b57a1a; }
 

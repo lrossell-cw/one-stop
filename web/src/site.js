@@ -12,10 +12,11 @@ export const SITE_VIEWBOX = { width: 657, height: 624 };
 /**
  * Rooms the map draws. `hall: true` means it is a data hall you can zoom into.
  *
- * MMR: the cutsheet's endpoints are MMR164 / "MMR ISP PP", and the floorplan
- * shows two MMR rooms (MMR2 and MMR3). Which one room 164 is has not been
- * confirmed, so both are drawn and the logical MMR node anchors on MMR3, the
- * nearer of the two to DH151. Correcting this is a one-line change here.
+ * MMR1 is where the cutsheet's MMR164 endpoints live. It is the heavy-bordered
+ * room at bottom-centre of the floorplan -- its outline is 7px thick in the
+ * source raster, several times anything else on the drawing, which is how it
+ * was identified. MMR2 and MMR3 are drawn for orientation but carry no
+ * inter-hall fiber in the MMR cutsheet.
  */
 export const ROOMS = [
   { id: 'DH173', label: 'DH173', hall: true, x: 48, y: 128, w: 112, h: 179 },
@@ -23,13 +24,14 @@ export const ROOMS = [
   { id: 'DH120', label: 'DH120', hall: true, x: 500, y: 18, w: 117, h: 189 },
   { id: 'DH160', label: 'DH160', hall: true, x: 502, y: 315, w: 115, h: 125 },
 
+  { id: 'MMR1', label: 'MMR1', hall: false, x: 273, y: 447, w: 51, h: 40 },
   { id: 'MMR3', label: 'MMR3', hall: false, x: 118, y: 92, w: 47, h: 23 },
   { id: 'MMR2', label: 'MMR2', hall: false, x: 270, y: 93, w: 45, h: 22 },
 ];
 
 /** Where a fiber path attaches for each logical node in the model. */
 export const NODE_ANCHORS = {
-  MMR: { x: 141, y: 103, room: 'MMR3' },
+  MMR: { x: 298, y: 467, room: 'MMR1' },
   DH151: { x: 104, y: 407, room: 'DH151' },
   DH173: { x: 104, y: 217, room: 'DH173' },
   DH120: { x: 558, y: 112, room: 'DH120' },
