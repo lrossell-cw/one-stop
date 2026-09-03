@@ -1,0 +1,17 @@
+{
+  "name": "@one-stop/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Express API and shared persistent store for fiber run status",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node --watch --disable-warning=ExperimentalWarning src/index.js",
+    "start": "node --disable-warning=ExperimentalWarning src/index.js",
+    "test": "node --test --disable-warning=ExperimentalWarning test/*.test.js"
+  },
+  "dependencies": {
+    "@one-stop/shared": "*",
+    "express": "^4.21.2"
+  }
+}
