@@ -1,0 +1,16 @@
+{
+  "name": "@one-stop/shared",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Domain model, location-code parsing, and cutsheet ingest shared by server and web",
+  "main": "src/model.js",
+  "exports": {
+    ".": "./src/model.js",
+    "./model": "./src/model.js",
+    "./location": "./src/location.js",
+    "./cutsheet": "./src/cutsheet.js",
+    "./ingest/csv": "./src/ingest/csv.js",
+    "./ingest/sources": "./src/ingest/sources.js"
+  }
+}

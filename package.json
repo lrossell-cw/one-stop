@@ -1,0 +1,27 @@
+{
+  "name": "one-stop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "PHX01 one-stop-shop: interactive site map and inter-hall fiber run tracker",
+  "type": "module",
+  "workspaces": [
+    "shared",
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "ingest": "node shared/src/ingest/cli.js",
+    "colors": "python3 scripts/extract_pdf_colors.py",
+    "dev": "concurrently -n server,web -c cyan,magenta \"npm:dev:server\" \"npm:dev:web\"",
+    "dev:server": "npm run dev --workspace=server",
+    "dev:web": "npm run dev --workspace=web",
+    "build": "npm run build --workspace=web",
+    "test": "node --test shared/test/*.test.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
