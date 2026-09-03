@@ -93,6 +93,26 @@ test('sorting is deterministic across repeated builds', () => {
   assert.deepEqual(a, b);
 });
 
+test('an implied endpoint still sorts under its hall, not at the bottom', () => {
+  // Every `120 Z` cell in the sheet is blank, carrying only cassette/port.
+  // Those rows are real and patched, so they must sort within DH120 rather
+  // than collapsing to the end of the table as "missing".
+  const rows = cutsheetRows(withStatus, null);
+  const implied = rows.filter((r) => r.aInferred);
+  assert.ok(implied.length > 0, 'expected rows with an inferred A-side');
+
+  for (const row of implied) {
+    assert.ok(row.aSide, 'inferred endpoint must still produce a sort key');
+    assert.equal(row.aSide.alpha, row.aNode);
+  }
+
+  // They are interleaved by hall, not all trailing.
+  const lastNamed = rows.findLastIndex((r) => r.aSide && !r.aInferred);
+  const firstImplied = rows.findIndex((r) => r.aInferred);
+  assert.ok(firstImplied < lastNamed,
+            'implied rows should sort among named ones, not after all of them');
+});
+
 test('rows carry the status the UI needs to color them', () => {
   const rows = cutsheetRows(withStatus, 'DH120');
   for (const row of rows) {

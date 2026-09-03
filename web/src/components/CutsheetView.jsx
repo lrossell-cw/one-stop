@@ -111,7 +111,9 @@ export default function CutsheetView({ circuits, hall, onSelectHall, onCycle, bu
 
         {rows.length === 0 && (
           <p className="empty">
-            No inter-hall fiber runs touch {hall} in the MMR cutsheet.
+            {hall
+              ? `No inter-hall fiber runs touch ${hall} in the MMR cutsheet.`
+              : 'No fiber runs found in the cutsheet.'}
             {hall === 'DH173' && (
               <> DH173 has no columns in <code>MMR_Cutsheet.csv</code>, so it is
               expected to be empty until its runs are added.</>

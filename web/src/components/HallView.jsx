@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { rollUp } from '@one-stop/shared/model';
 import { STATUS_COLORS, STATUS_LABELS } from '../site.js';
 
 /**
@@ -10,9 +11,9 @@ import { STATUS_COLORS, STATUS_LABELS } from '../site.js';
  * those is a later phase, and pretending otherwise would be worse than an
  * obvious abstraction.
  */
-const GRID = { cols: 8, rows: 5, cell: 74, gap: 14, pad: 40 };
+const GRID = { cols: 8, cell: 74, gap: 14, pad: 40 };
 
-export default function HallView({ hall, circuits, onBack, onSelectRun, selectedRunKey }) {
+export default function HallView({ hall, circuits, onBack, onSelectRun }) {
   // Cabinets that terminate a run in this hall, keyed by rack number.
   const racks = useMemo(() => {
     const map = new Map();
@@ -38,8 +39,13 @@ export default function HallView({ hall, circuits, onBack, onSelectRun, selected
     });
   }, [circuits, hall]);
 
-  const width = GRID.pad * 2 + GRID.cols * (GRID.cell + GRID.gap);
-  const height = GRID.pad * 2 + GRID.rows * (GRID.cell + GRID.gap) + 30;
+  // Rows grow with the data instead of being capped, so a hall never silently
+  // hides cabinets the caption has already counted. Interior gaps only: with a
+  // gap per column the right margin ends up wider than the left.
+  const cols = Math.min(GRID.cols, Math.max(racks.length, 1));
+  const rows = Math.max(1, Math.ceil(racks.length / GRID.cols));
+  const width = GRID.pad * 2 + cols * GRID.cell + (cols - 1) * GRID.gap;
+  const height = GRID.pad * 2 + rows * GRID.cell + (rows - 1) * GRID.gap;
 
   return (
     <div className="hall-view">
@@ -62,13 +68,13 @@ export default function HallView({ hall, circuits, onBack, onSelectRun, selected
       >
         <rect x="0" y="0" width={width} height={height} className="map-bg" />
 
-        {racks.slice(0, GRID.cols * GRID.rows).map((rack, i) => {
+        {racks.map((rack, i) => {
           const col = i % GRID.cols;
           const row = Math.floor(i / GRID.cols);
           const x = GRID.pad + col * (GRID.cell + GRID.gap);
           const y = GRID.pad + row * (GRID.cell + GRID.gap);
 
-          const worst = worstOf(rack.runs.map(({ hop }) => hop.status));
+          const worst = rollUp(rack.runs.map(({ hop }) => hop.status));
 
           return (
             <g key={rack.key} className="cabinet">
@@ -99,10 +105,7 @@ export default function HallView({ hall, circuits, onBack, onSelectRun, selected
           {racks.flatMap((rack) => rack.runs.map(({ circuit, hop, side, end }) => {
             const key = `${circuit.id}::${hop.id}::${side}`;
             return (
-              <li
-                key={key}
-                className={`run ${selectedRunKey === key ? 'is-selected' : ''}`}
-              >
+              <li key={key} className="run">
                 <button
                   type="button"
                   className="run-status"
@@ -128,12 +131,3 @@ export default function HallView({ hall, circuits, onBack, onSelectRun, selected
   );
 }
 
-const SEVERITY = { DOWN: 3, INVESTIGATE: 2, UP: 1, NOT_RUN: 0 };
-
-function worstOf(statuses) {
-  let worst = 'NOT_RUN';
-  for (const s of statuses) {
-    if ((SEVERITY[s] ?? 0) > (SEVERITY[worst] ?? 0)) worst = s;
-  }
-  return worst;
-}

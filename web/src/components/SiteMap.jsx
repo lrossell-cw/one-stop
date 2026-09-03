@@ -1,12 +1,4 @@
-import { useMemo } from 'react';
-import { rollUp } from '@one-stop/shared/model';
-import {
-  ROOMS,
-  SITE_VIEWBOX,
-  STATUS_COLORS,
-  STATUS_LABELS,
-  routeHop,
-} from '../site.js';
+import { ROOMS, SITE_VIEWBOX, STATUS_COLORS, STATUS_LABELS } from '../site.js';
 
 /**
  * Whole-site map with the fiber overlay.
@@ -15,43 +7,17 @@ import {
  * pair of rooms they actually connect. Re-patch a circuit to a different hall
  * and it moves to a different group, so the picture follows the data rather
  * than a fixed set of lines.
+ *
+ * `segments` is grouped once by App and passed in, so the map and the detail
+ * panel are guaranteed to be looking at the same objects and the same keys.
  */
 export default function SiteMap({
-  circuits,
+  segments,
   showFiber,
-  selectedHall,
   onSelectHall,
   onSelectSegment,
   selectedSegment,
 }) {
-  // Group hops by the room pair they connect, derived from live endpoint data.
-  const segments = useMemo(() => {
-    const groups = new Map();
-
-    for (const circuit of circuits) {
-      for (const hop of circuit.hops) {
-        const from = hop.a?.node ?? hop.from;
-        const to = hop.z?.node ?? hop.to;
-        if (!from || !to || from === to) continue;
-
-        const key = `${from}->${to}`;
-        if (!groups.has(key)) groups.set(key, { key, from, to, hops: [] });
-        groups.get(key).hops.push({ circuit, hop });
-      }
-    }
-
-    return [...groups.values()].map((g, i) => ({
-      ...g,
-      // Fan parallel runs apart so a re-route is visible rather than hidden
-      // underneath the run it replaced.
-      path: routeHop(g.from, g.to, { offset: (i % 3) * 14 - 14 }),
-      status: rollUp(g.hops.map(({ hop }) => hop.status)),
-      total: g.hops.length,
-      down: g.hops.filter(({ hop }) => hop.status === 'DOWN').length,
-      investigate: g.hops.filter(({ hop }) => hop.status === 'INVESTIGATE').length,
-    }));
-  }, [circuits]);
-
   return (
     <svg
       className="site-map"
@@ -65,17 +31,43 @@ export default function SiteMap({
         className="map-bg"
       />
 
+      {/*
+        Fiber is drawn BELOW the rooms. Its hit targets are deliberately wide,
+        and every path begins at an anchor inside a hall's rectangle, so
+        painting it on top would let the overlay swallow the clicks that zoom
+        into a hall -- the app's primary interaction.
+      */}
+      {showFiber && (
+        <g className="fiber-layer">
+          {segments.map((seg) => {
+            if (!seg.path) return null;
+            const isSelected = selectedSegment === seg.key;
+            return (
+              <g key={seg.key} className="fiber-segment">
+                <path
+                  d={seg.path}
+                  className="fiber-hitbox"
+                  onClick={() => onSelectSegment(seg)}
+                />
+                <path
+                  d={seg.path}
+                  className={`fiber-path ${isSelected ? 'is-selected' : ''}`}
+                  stroke={STATUS_COLORS[seg.status]}
+                  strokeDasharray={seg.status === 'NOT_RUN' ? '6 5' : undefined}
+                  pointerEvents="none"
+                />
+              </g>
+            );
+          })}
+        </g>
+      )}
+
       {ROOMS.map((room) => {
         const isHall = room.hall;
-        const selected = selectedHall === room.id;
         return (
           <g
             key={room.id}
-            className={[
-              'room',
-              isHall ? 'room--hall' : 'room--aux',
-              selected ? 'is-selected' : '',
-            ].join(' ')}
+            className={['room', isHall ? 'room--hall' : 'room--aux'].join(' ')}
             onClick={isHall ? () => onSelectHall(room.id) : undefined}
             role={isHall ? 'button' : undefined}
             tabIndex={isHall ? 0 : undefined}
@@ -101,30 +93,10 @@ export default function SiteMap({
         );
       })}
 
+      {/* Badges last, so a count is never hidden under a room. */}
       {showFiber && (
-        <g className="fiber-layer">
-          {segments.map((seg) => {
-            if (!seg.path) return null;
-            const isSelected = selectedSegment === seg.key;
-            return (
-              <g key={seg.key} className="fiber-segment">
-                {/* Wide invisible stroke so the line is easy to hit. */}
-                <path
-                  d={seg.path}
-                  className="fiber-hitbox"
-                  onClick={() => onSelectSegment(seg)}
-                />
-                <path
-                  d={seg.path}
-                  className={`fiber-path ${isSelected ? 'is-selected' : ''}`}
-                  stroke={STATUS_COLORS[seg.status]}
-                  strokeDasharray={seg.status === 'NOT_RUN' ? '6 5' : undefined}
-                  pointerEvents="none"
-                />
-                <SegmentBadge segment={seg} />
-              </g>
-            );
-          })}
+        <g className="badge-layer" pointerEvents="none">
+          {segments.map((seg) => (seg.path ? <SegmentBadge key={seg.key} segment={seg} /> : null))}
         </g>
       )}
     </svg>
@@ -141,7 +113,7 @@ function SegmentBadge({ segment }) {
     : String(segment.total);
 
   return (
-    <g pointerEvents="none" className="segment-badge">
+    <g className="segment-badge">
       <rect
         x={anchor.x - 15} y={anchor.y - 9}
         width="30" height="18" rx="9"

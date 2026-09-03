@@ -4,14 +4,24 @@ import SiteMap from './components/SiteMap.jsx';
 import SegmentPanel from './components/SegmentPanel.jsx';
 import HallView from './components/HallView.jsx';
 import CutsheetView from './components/CutsheetView.jsx';
-import { STATUS_COLORS, STATUS_LABELS } from './site.js';
+import { groupSegments } from './segments.js';
+import { HALLS, STATUS_COLORS, STATUS_LABELS } from './site.js';
+
+/** Last path segment, for displaying a source path without the machine's tree. */
+function basename(p) {
+  return p ? p.split('/').pop() : null;
+}
 
 export default function App() {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [view, setView] = useState('visual');      // 'visual' | 'cutsheet'
   const [showFiber, setShowFiber] = useState(true);
-  const [hall, setHall] = useState(null);
+  // Kept separate on purpose: the cutsheet has an MMR tab, but MMR is not a
+  // data hall and has no overhead view. Sharing one piece of state here put
+  // the visual view into a HallView for a room that does not exist.
+  const [zoomedHall, setZoomedHall] = useState(null);
+  const [cutsheetTab, setCutsheetTab] = useState(null);
   const [segmentKey, setSegmentKey] = useState(null);
   const [busyKey, setBusyKey] = useState(null);
 
@@ -59,25 +69,9 @@ export default function App() {
 
   // Rebuilt from fresh data each render, so the panel tracks the latest state
   // rather than holding a stale snapshot of the segment it was opened with.
-  const segments = useMemo(() => {
-    const groups = new Map();
-    for (const circuit of circuits) {
-      for (const hop of circuit.hops) {
-        const from = hop.a?.node ?? hop.from;
-        const to = hop.z?.node ?? hop.to;
-        if (!from || !to || from === to) continue;
-        const key = `${from}->${to}`;
-        if (!groups.has(key)) groups.set(key, { key, from, to, hops: [] });
-        groups.get(key).hops.push({ circuit, hop });
-      }
-    }
-    for (const g of groups.values()) {
-      g.total = g.hops.length;
-      g.down = g.hops.filter(({ hop }) => hop.status === 'DOWN').length;
-      g.investigate = g.hops.filter(({ hop }) => hop.status === 'INVESTIGATE').length;
-    }
-    return groups;
-  }, [circuits]);
+  // Shares groupSegments with the map so the two can never disagree on a key.
+  const segments = useMemo(() => groupSegments(circuits), [circuits]);
+  const segmentList = useMemo(() => [...segments.values()], [segments]);
 
   const selectedSegment = segmentKey ? segments.get(segmentKey) ?? null : null;
 
@@ -125,7 +119,7 @@ export default function App() {
             </button>
           </div>
 
-          {view === 'visual' && !hall && (
+          {view === 'visual' && !zoomedHall && (
             <label className="switch">
               <input
                 type="checkbox"
@@ -151,38 +145,36 @@ export default function App() {
 
       {data.warnings?.length > 0 && (
         <ul className="warnings">
-          {data.warnings.map((w) => <li key={w}>{w}</li>)}
+          {data.warnings.map((w, i) => <li key={`${i}-${w}`}>{w}</li>)}
         </ul>
       )}
 
-      <main className={view === 'visual' && !hall ? 'layout layout--split' : 'layout'}>
+      <main className={view === 'visual' && !zoomedHall ? 'layout layout--split' : 'layout'}>
         {view === 'cutsheet' && (
           <CutsheetView
             circuits={circuits}
-            hall={hall}
-            onSelectHall={setHall}
+            hall={cutsheetTab}
+            onSelectHall={setCutsheetTab}
             onCycle={cycle}
             busyKey={busyKey}
           />
         )}
 
-        {view === 'visual' && hall && (
+        {view === 'visual' && zoomedHall && (
           <HallView
-            hall={hall}
+            hall={zoomedHall}
             circuits={circuits}
-            onBack={() => setHall(null)}
+            onBack={() => setZoomedHall(null)}
             onSelectRun={cycle}
-            selectedRunKey={null}
           />
         )}
 
-        {view === 'visual' && !hall && (
+        {view === 'visual' && !zoomedHall && (
           <>
             <SiteMap
-              circuits={circuits}
+              segments={segmentList}
               showFiber={showFiber}
-              selectedHall={hall}
-              onSelectHall={setHall}
+              onSelectHall={(id) => HALLS.includes(id) && setZoomedHall(id)}
               onSelectSegment={(seg) => setSegmentKey(seg.key)}
               selectedSegment={segmentKey}
             />
@@ -197,7 +189,7 @@ export default function App() {
       </main>
 
       <footer className="app-foot">
-        Source: <code>{data.meta?.source}</code>
+        Source: <code>{basename(data.meta?.csvPath) ?? data.meta?.source}</code>
         {data.meta?.colorsPath && <> + PDF color legend</>}
         {' '}&middot; statuses are shared &mdash; everyone sees the same state.
       </footer>

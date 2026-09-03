@@ -10,6 +10,36 @@
 import { parseLocation, compareRows } from './location.js';
 
 /**
+ * The location a row sorts by.
+ *
+ * An endpoint whose location cell is blank but whose hall is known from the
+ * column header (every `120 Z` cell in the sheet) is still a real, patched
+ * endpoint. Sorting it as "missing" would drop the whole 120<->160 hop to the
+ * bottom of every table, ordered only by its Z-side -- not the
+ * alphabetical-then-numeric A-side order the cutsheet is supposed to have.
+ * So synthesise a key from the inferred hall instead; it sorts within that
+ * hall, after the rows that name a rack.
+ */
+function sortKeyFor(end) {
+  if (!end) return null;
+  if (end.location) return end.location;
+
+  const parsed = parseLocation(end.raw ?? '');
+  if (parsed) return parsed;
+  if (!end.node) return null;
+
+  return {
+    raw: end.raw || `${end.node} ${end.cassette ?? ''}${end.port ? ` ${end.port}` : ''}`.trim(),
+    node: end.node,
+    alpha: end.node,
+    rack: null,
+    unit: null,
+    role: null,
+    inferred: true,
+  };
+}
+
+/**
  * Flatten circuits into cutsheet rows, optionally filtered to one hall.
  *
  * @param {object[]} circuits  circuits with statuses already merged
@@ -51,8 +81,8 @@ export function cutsheetRows(circuits, hall = null) {
         aInferred: Boolean(hop.a?.nodeInferred),
         zInferred: Boolean(hop.z?.nodeInferred),
         // Parsed forms drive the sort; the raw strings drive display.
-        aSide: hop.a?.location ?? parseLocation(hop.a?.raw ?? ''),
-        zSide: hop.z?.location ?? parseLocation(hop.z?.raw ?? ''),
+        aSide: sortKeyFor(hop.a),
+        zSide: sortKeyFor(hop.z),
       });
     }
   }
