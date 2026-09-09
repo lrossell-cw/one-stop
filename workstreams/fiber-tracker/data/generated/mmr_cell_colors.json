@@ -1,0 +1,270 @@
+{
+  "source": "data/raw/MMR_Cutsheet.pdf",
+  "generated_by": "scripts/extract_pdf_colors.py",
+  "note": "Occupancy colors recovered from PDF cell fills; the CSV has none. Keyed by CSV line number (1-based, line 1 = header) and hop. NOTE-colored cells are annotations, not statuses.",
+  "legend": {
+    "OCCUPIED": "yellow",
+    "OPEN": "green",
+    "FAULTY": "red",
+    "NOTE": "blue/teal annotation"
+  },
+  "hops": [
+    "MMR-151",
+    "151-120",
+    "120-160"
+  ],
+  "fill_counts": {
+    "NOTE": 4,
+    "OCCUPIED": 18,
+    "FAULTY": 2,
+    "OPEN": 13
+  },
+  "rows_verified_against_csv": 48,
+  "cells": {
+    "2": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "3": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "4": {
+      "MMR-151": "FAULTY",
+      "151-120": "OPEN",
+      "120-160": "OPEN"
+    },
+    "5": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "6": {
+      "MMR-151": "FAULTY",
+      "151-120": "OPEN",
+      "120-160": "OPEN"
+    },
+    "7": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "8": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "9": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "10": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "11": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "12": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "13": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "14": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "15": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "16": {
+      "MMR-151": "OPEN",
+      "151-120": "OPEN",
+      "120-160": "OPEN"
+    },
+    "17": {
+      "MMR-151": "OPEN",
+      "151-120": "OPEN",
+      "120-160": "OPEN"
+    },
+    "18": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "19": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "20": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "21": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "22": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "23": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "24": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "25": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "27": {
+      "MMR-151": "OPEN",
+      "151-120": "OPEN",
+      "120-160": "OPEN"
+    },
+    "28": {
+      "MMR-151": "OPEN",
+      "151-120": "OPEN",
+      "120-160": "OPEN"
+    },
+    "29": {
+      "MMR-151": "OPEN",
+      "151-120": "OPEN",
+      "120-160": "OPEN"
+    },
+    "30": {
+      "MMR-151": "OPEN",
+      "151-120": "OPEN",
+      "120-160": "OPEN"
+    },
+    "31": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "32": {
+      "MMR-151": "NOTE",
+      "151-120": "NOTE",
+      "120-160": "NOTE"
+    },
+    "33": {
+      "MMR-151": "NOTE",
+      "151-120": "NOTE",
+      "120-160": "NOTE"
+    },
+    "34": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "35": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "36": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "37": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "38": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "39": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "40": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "41": {
+      "MMR-151": "OCCUPIED",
+      "151-120": "OCCUPIED",
+      "120-160": "OCCUPIED"
+    },
+    "42": {
+      "MMR-151": "OPEN",
+      "151-120": "OPEN",
+      "120-160": "OPEN"
+    },
+    "43": {
+      "MMR-151": "OPEN",
+      "151-120": "OPEN",
+      "120-160": "OPEN"
+    },
+    "44": {
+      "MMR-151": "OPEN",
+      "151-120": "OPEN",
+      "120-160": "OPEN"
+    },
+    "45": {
+      "MMR-151": "OPEN",
+      "151-120": "OPEN",
+      "120-160": "OPEN"
+    },
+    "46": {
+      "MMR-151": "OPEN",
+      "151-120": "OPEN",
+      "120-160": "OPEN"
+    },
+    "47": {
+      "MMR-151": "OPEN",
+      "151-120": "OPEN",
+      "120-160": "OPEN"
+    },
+    "48": {
+      "MMR-151": "OPEN",
+      "151-120": "OPEN",
+      "120-160": "OPEN"
+    },
+    "49": {
+      "MMR-151": "OPEN",
+      "151-120": "OPEN",
+      "120-160": "OPEN"
+    },
+    "50": {
+      "MMR-151": "OPEN",
+      "151-120": "OPEN",
+      "120-160": "OPEN"
+    },
+    "51": {
+      "MMR-151": "OPEN",
+      "151-120": "OPEN",
+      "120-160": "OPEN"
+    }
+  }
+}

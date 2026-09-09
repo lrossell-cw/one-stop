@@ -1,0 +1,28 @@
+# Local/dev convenience only — runs both services together with one
+# command. Not a production deployment manifest; see backend/README
+# notes on Kubernetes Secrets before running this anywhere shared.
+#
+# Usage:
+#   1. cp backend/.env.example backend/.env and fill in real values
+#   2. docker compose up --build
+#   3. Frontend: http://localhost:8080   Backend: http://localhost:3001
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "3001:3001"
+    env_file:
+      - ./backend/.env
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_BASE_URL: http://localhost:3001
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    restart: unless-stopped

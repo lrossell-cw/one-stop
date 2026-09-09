@@ -1,0 +1,15 @@
+# Secrets — never commit
+backend/.env
+frontend/.env
+frontend/.env.production
+
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Build output
+frontend/dist/
+
+# OS/editor cruft
+.DS_Store
+*.log

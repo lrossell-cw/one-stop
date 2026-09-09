@@ -1,0 +1,5082 @@
+{
+  "meta": {
+    "source": "csv",
+    "csvPath": "/sessions/zealous-focused-lamport/mnt/one-stop/data/raw/MMR_Cutsheet.csv",
+    "colorsPath": "/sessions/zealous-focused-lamport/mnt/one-stop/data/generated/mmr_cell_colors.json",
+    "colorLegend": {
+      "OCCUPIED": "yellow",
+      "OPEN": "green",
+      "FAULTY": "red",
+      "NOTE": "blue/teal annotation"
+    },
+    "loadedAt": "2026-09-03T21:11:53.201Z"
+  },
+  "circuits": [
+    {
+      "id": "XID0363-447874986@2",
+      "csvLine": 2,
+      "label": "XID0363 / 447874986",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU22",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 22,
+            "role": null,
+            "cassette": "A",
+            "port": "1/2",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU22",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 22,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R33.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 4,
+            "role": null,
+            "cassette": "A",
+            "port": "1/2",
+            "patched": true,
+            "location": {
+              "raw": "DH151.R33.RU4",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "XID0369-44787492@3",
+      "csvLine": 3,
+      "label": "XID0369 / 44787492",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU22",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 22,
+            "role": null,
+            "cassette": "A",
+            "port": "3/4",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU22",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 22,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R33.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 4,
+            "role": null,
+            "cassette": "A",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R33.RU4",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "BAD-DO-NOT-USE@4",
+      "csvLine": 4,
+      "label": "BAD DO NOT USE",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": true,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU22",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 22,
+            "role": null,
+            "cassette": "A",
+            "port": "5/6",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU22",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 22,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R33.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 4,
+            "role": null,
+            "cassette": "A",
+            "port": "5/6",
+            "patched": true,
+            "location": {
+              "raw": "DH151.R33.RU4",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "FAULTY",
+          "derivedStatus": "DOWN"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "XID0365-447874988@5",
+      "csvLine": 5,
+      "label": "XID0365 / 447874988",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU22",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 22,
+            "role": null,
+            "cassette": "A",
+            "port": "7/8",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU22",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 22,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R33.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 4,
+            "role": null,
+            "cassette": "A",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R33.RU4",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "BAD-DO-NOT-USE@6",
+      "csvLine": 6,
+      "label": "BAD DO NOT USE",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": true,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU22",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 22,
+            "role": null,
+            "cassette": "A",
+            "port": "9/10",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU22",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 22,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R33.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 4,
+            "role": null,
+            "cassette": "A",
+            "port": "9/10",
+            "patched": true,
+            "location": {
+              "raw": "DH151.R33.RU4",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "FAULTY",
+          "derivedStatus": "DOWN"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "XID0364-447874987@7",
+      "csvLine": 7,
+      "label": "XID0364 / 447874987",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU22",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 22,
+            "role": null,
+            "cassette": "A",
+            "port": "11/12",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU22",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 22,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R33.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 4,
+            "role": null,
+            "cassette": "A",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R33.RU4",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "XID0366-447874989@8",
+      "csvLine": 8,
+      "label": "XID0366 / 447874989",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU22",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 22,
+            "role": null,
+            "cassette": "A",
+            "port": "13/14",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU22",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 22,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R33.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 4,
+            "role": null,
+            "cassette": "A",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R33.RU4",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "XID0362-447874980@9",
+      "csvLine": 9,
+      "label": "XID0362 / 447874980",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU22",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 22,
+            "role": null,
+            "cassette": "A",
+            "port": "15/16",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU22",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 22,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R33.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 4,
+            "role": null,
+            "cassette": "A",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R33.RU4",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "XID0368-447874991@10",
+      "csvLine": 10,
+      "label": "XID0368 / 447874991",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU22",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 22,
+            "role": null,
+            "cassette": "A",
+            "port": "17/18",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU22",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 22,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R33.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 4,
+            "role": null,
+            "cassette": "A",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R33.RU4",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "XID0417-448933804@11",
+      "csvLine": 11,
+      "label": "XID0417 / 448933804",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": "dh160.1.38",
+      "nokiaPort": "C24",
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU22",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 22,
+            "role": null,
+            "cassette": "A",
+            "port": "19/20",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU22",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 22,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R33.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 4,
+            "role": null,
+            "cassette": "A",
+            "port": "19/20",
+            "patched": true,
+            "location": {
+              "raw": "DH151.R33.RU4",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": {
+            "raw": "DH151 CAB33 RU05",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 5,
+            "role": null,
+            "cassette": "D",
+            "port": "15/16",
+            "patched": true,
+            "location": {
+              "raw": "DH151 CAB33 RU05",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 5,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "z": {
+            "raw": "dh120.266.32",
+            "node": "DH120",
+            "nodeInferred": false,
+            "rack": 266,
+            "unit": 32,
+            "role": null,
+            "cassette": "D",
+            "port": "15/16",
+            "patched": true,
+            "location": {
+              "raw": "dh120.266.32",
+              "node": "DH120",
+              "rack": 266,
+              "unit": 32,
+              "role": null,
+              "alpha": "DH120"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": {
+            "raw": "",
+            "node": "DH120",
+            "nodeInferred": true,
+            "rack": null,
+            "unit": null,
+            "role": null,
+            "cassette": "A",
+            "port": "15/16",
+            "patched": true,
+            "location": null
+          },
+          "z": {
+            "raw": "dh160.26.38",
+            "node": "DH160",
+            "nodeInferred": false,
+            "rack": 26,
+            "unit": 38,
+            "role": null,
+            "cassette": "C",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "dh160.26.38",
+              "node": "DH160",
+              "rack": 26,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH160"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        }
+      ]
+    },
+    {
+      "id": "XID0418-448933797@12",
+      "csvLine": 12,
+      "label": "XID0418/ 448933797",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": "dh160.1.38",
+      "nokiaPort": "C18",
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU22",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 22,
+            "role": null,
+            "cassette": "A",
+            "port": "21/22",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU22",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 22,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R33.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 4,
+            "role": null,
+            "cassette": "A",
+            "port": "21/22",
+            "patched": true,
+            "location": {
+              "raw": "DH151.R33.RU4",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": {
+            "raw": "DH151 CAB33 RU05",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 5,
+            "role": null,
+            "cassette": "D",
+            "port": "3/4",
+            "patched": true,
+            "location": {
+              "raw": "DH151 CAB33 RU05",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 5,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "z": {
+            "raw": "dh120.266.32",
+            "node": "DH120",
+            "nodeInferred": false,
+            "rack": 266,
+            "unit": 32,
+            "role": null,
+            "cassette": "D",
+            "port": "3/4",
+            "patched": true,
+            "location": {
+              "raw": "dh120.266.32",
+              "node": "DH120",
+              "rack": 266,
+              "unit": 32,
+              "role": null,
+              "alpha": "DH120"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": {
+            "raw": "",
+            "node": "DH120",
+            "nodeInferred": true,
+            "rack": null,
+            "unit": null,
+            "role": null,
+            "cassette": "A",
+            "port": "3/4",
+            "patched": true,
+            "location": null
+          },
+          "z": {
+            "raw": "dh160.26.38",
+            "node": "DH160",
+            "nodeInferred": false,
+            "rack": 26,
+            "unit": 38,
+            "role": null,
+            "cassette": "C",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "dh160.26.38",
+              "node": "DH160",
+              "rack": 26,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH160"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        }
+      ]
+    },
+    {
+      "id": "XID0419-448933799@13",
+      "csvLine": 13,
+      "label": "XID0419 / 448933799",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": "dh160.1.38",
+      "nokiaPort": "C19",
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU22",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 22,
+            "role": null,
+            "cassette": "A",
+            "port": "23/24",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU22",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 22,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R33.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 4,
+            "role": null,
+            "cassette": "A",
+            "port": "23/24",
+            "patched": true,
+            "location": {
+              "raw": "DH151.R33.RU4",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": {
+            "raw": "DH151 CAB33 RU05",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 5,
+            "role": null,
+            "cassette": "D",
+            "port": "5/6",
+            "patched": true,
+            "location": {
+              "raw": "DH151 CAB33 RU05",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 5,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "z": {
+            "raw": "dh120.266.32",
+            "node": "DH120",
+            "nodeInferred": false,
+            "rack": 266,
+            "unit": 32,
+            "role": null,
+            "cassette": "D",
+            "port": "5/6",
+            "patched": true,
+            "location": {
+              "raw": "dh120.266.32",
+              "node": "DH120",
+              "rack": 266,
+              "unit": 32,
+              "role": null,
+              "alpha": "DH120"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": {
+            "raw": "",
+            "node": "DH120",
+            "nodeInferred": true,
+            "rack": null,
+            "unit": null,
+            "role": null,
+            "cassette": "A",
+            "port": "5/6",
+            "patched": true,
+            "location": null
+          },
+          "z": {
+            "raw": "dh160.26.38",
+            "node": "DH160",
+            "nodeInferred": false,
+            "rack": 26,
+            "unit": 38,
+            "role": null,
+            "cassette": "C",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "dh160.26.38",
+              "node": "DH160",
+              "rack": 26,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH160"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        }
+      ]
+    },
+    {
+      "id": "XID0424-448933708@14",
+      "csvLine": 14,
+      "label": "XID0424 / 448933708",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": "dh160.1.38",
+      "nokiaPort": "C17",
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU22",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 22,
+            "role": null,
+            "cassette": "B",
+            "port": "1/2",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU22",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 22,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R33.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 4,
+            "role": null,
+            "cassette": "B",
+            "port": "1/2",
+            "patched": true,
+            "location": {
+              "raw": "DH151.R33.RU4",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": {
+            "raw": "DH151 CAB33 RU05",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 5,
+            "role": null,
+            "cassette": "D",
+            "port": "1/2",
+            "patched": true,
+            "location": {
+              "raw": "DH151 CAB33 RU05",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 5,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "z": {
+            "raw": "dh120.266.32",
+            "node": "DH120",
+            "nodeInferred": false,
+            "rack": 266,
+            "unit": 32,
+            "role": null,
+            "cassette": "D",
+            "port": "1/2",
+            "patched": true,
+            "location": {
+              "raw": "dh120.266.32",
+              "node": "DH120",
+              "rack": 266,
+              "unit": 32,
+              "role": null,
+              "alpha": "DH120"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": {
+            "raw": "",
+            "node": "DH120",
+            "nodeInferred": true,
+            "rack": null,
+            "unit": null,
+            "role": null,
+            "cassette": "A",
+            "port": "1/2",
+            "patched": true,
+            "location": null
+          },
+          "z": {
+            "raw": "dh160.26.38",
+            "node": "DH160",
+            "nodeInferred": false,
+            "rack": 26,
+            "unit": 38,
+            "role": null,
+            "cassette": "C",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "dh160.26.38",
+              "node": "DH160",
+              "rack": 26,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH160"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        }
+      ]
+    },
+    {
+      "id": "XID0416-448933801@15",
+      "csvLine": 15,
+      "label": "XID0416 / 448933801",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": "dh160.1.38",
+      "nokiaPort": "C21",
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU22",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 22,
+            "role": null,
+            "cassette": "B",
+            "port": "3/4",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU22",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 22,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R33.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 4,
+            "role": null,
+            "cassette": "B",
+            "port": "3/4",
+            "patched": true,
+            "location": {
+              "raw": "DH151.R33.RU4",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": {
+            "raw": "DH151 CAB33 RU05",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 5,
+            "role": null,
+            "cassette": "D",
+            "port": "9/10",
+            "patched": true,
+            "location": {
+              "raw": "DH151 CAB33 RU05",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 5,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "z": {
+            "raw": "dh120.266.32",
+            "node": "DH120",
+            "nodeInferred": false,
+            "rack": 266,
+            "unit": 32,
+            "role": null,
+            "cassette": "D",
+            "port": "9/10",
+            "patched": true,
+            "location": {
+              "raw": "dh120.266.32",
+              "node": "DH120",
+              "rack": 266,
+              "unit": 32,
+              "role": null,
+              "alpha": "DH120"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": {
+            "raw": "",
+            "node": "DH120",
+            "nodeInferred": true,
+            "rack": null,
+            "unit": null,
+            "role": null,
+            "cassette": "A",
+            "port": "9/10",
+            "patched": true,
+            "location": null
+          },
+          "z": {
+            "raw": "dh160.26.38",
+            "node": "DH160",
+            "nodeInferred": false,
+            "rack": 26,
+            "unit": 38,
+            "role": null,
+            "cassette": "C",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "dh160.26.38",
+              "node": "DH160",
+              "rack": 26,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH160"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        }
+      ]
+    },
+    {
+      "id": "OPEN@16",
+      "csvLine": 16,
+      "label": "OPEN",
+      "unlabelled": false,
+      "isSpare": true,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU22",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 22,
+            "role": null,
+            "cassette": "B",
+            "port": "5/6",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU22",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 22,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R33.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 4,
+            "role": null,
+            "cassette": "B",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R33.RU4",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OPEN",
+          "derivedStatus": "INVESTIGATE"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "OPEN@17",
+      "csvLine": 17,
+      "label": "OPEN",
+      "unlabelled": false,
+      "isSpare": true,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU22",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 22,
+            "role": null,
+            "cassette": "B",
+            "port": "7/8",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU22",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 22,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R33.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 4,
+            "role": null,
+            "cassette": "B",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R33.RU4",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OPEN",
+          "derivedStatus": "INVESTIGATE"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "row-18",
+      "csvLine": 18,
+      "label": "(unlabelled)",
+      "unlabelled": true,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU22",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 22,
+            "role": null,
+            "cassette": "B",
+            "port": "9/10",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU22",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 22,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R33.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 4,
+            "role": null,
+            "cassette": "B",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R33.RU4",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "XID0425-448933800@19",
+      "csvLine": 19,
+      "label": "XID0425 / 448933800",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": "dh160.1.38",
+      "nokiaPort": "C20",
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU22",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 22,
+            "role": null,
+            "cassette": "B",
+            "port": "11/12",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU22",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 22,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R33.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 4,
+            "role": null,
+            "cassette": "B",
+            "port": "11/12",
+            "patched": true,
+            "location": {
+              "raw": "DH151.R33.RU4",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": {
+            "raw": "DH151 CAB33 RU05",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 5,
+            "role": null,
+            "cassette": "D",
+            "port": "7/8",
+            "patched": true,
+            "location": {
+              "raw": "DH151 CAB33 RU05",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 5,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "z": {
+            "raw": "dh120.266.32",
+            "node": "DH120",
+            "nodeInferred": false,
+            "rack": 266,
+            "unit": 32,
+            "role": null,
+            "cassette": "D",
+            "port": "7/8",
+            "patched": true,
+            "location": {
+              "raw": "dh120.266.32",
+              "node": "DH120",
+              "rack": 266,
+              "unit": 32,
+              "role": null,
+              "alpha": "DH120"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": {
+            "raw": "",
+            "node": "DH120",
+            "nodeInferred": true,
+            "rack": null,
+            "unit": null,
+            "role": null,
+            "cassette": "A",
+            "port": "7/8",
+            "patched": true,
+            "location": null
+          },
+          "z": {
+            "raw": "dh160.26.38",
+            "node": "DH160",
+            "nodeInferred": false,
+            "rack": 26,
+            "unit": 38,
+            "role": null,
+            "cassette": "C",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "dh160.26.38",
+              "node": "DH160",
+              "rack": 26,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH160"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        }
+      ]
+    },
+    {
+      "id": "XID0405@20",
+      "csvLine": 20,
+      "label": "XID0405 /",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU22",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 22,
+            "role": null,
+            "cassette": "B",
+            "port": "13/14",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU22",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 22,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R33.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 4,
+            "role": null,
+            "cassette": "B",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R33.RU4",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "XID0389-448332561@21",
+      "csvLine": 21,
+      "label": "XID0389 / 448332561",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU22",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 22,
+            "role": null,
+            "cassette": "B",
+            "port": "15/16",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU22",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 22,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R33.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 4,
+            "role": null,
+            "cassette": "B",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R33.RU4",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "Lumen-448332549@22",
+      "csvLine": 22,
+      "label": "Lumen 448332549",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU22",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 22,
+            "role": null,
+            "cassette": "B",
+            "port": "17/18",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU22",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 22,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R33.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 4,
+            "role": null,
+            "cassette": "B",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R33.RU4",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "XID0427-448933803@23",
+      "csvLine": 23,
+      "label": "XID0427/ 448933803",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": "dh160.1.38",
+      "nokiaPort": "C23",
+      "notes": "Checked CKT across each DH and was correct, issue is most likely in the MMR.",
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU22",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 22,
+            "role": null,
+            "cassette": "B",
+            "port": "19/20",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU22",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 22,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R33.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 4,
+            "role": null,
+            "cassette": "B",
+            "port": "19/20",
+            "patched": true,
+            "location": {
+              "raw": "DH151.R33.RU4",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": {
+            "raw": "DH151 CAB33 RU05",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 5,
+            "role": null,
+            "cassette": "D",
+            "port": "13/14",
+            "patched": true,
+            "location": {
+              "raw": "DH151 CAB33 RU05",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 5,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "z": {
+            "raw": "dh120.266.32",
+            "node": "DH120",
+            "nodeInferred": false,
+            "rack": 266,
+            "unit": 32,
+            "role": null,
+            "cassette": "D",
+            "port": "13/14",
+            "patched": true,
+            "location": {
+              "raw": "dh120.266.32",
+              "node": "DH120",
+              "rack": 266,
+              "unit": 32,
+              "role": null,
+              "alpha": "DH120"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": {
+            "raw": "",
+            "node": "DH120",
+            "nodeInferred": true,
+            "rack": null,
+            "unit": null,
+            "role": null,
+            "cassette": "A",
+            "port": "13/14",
+            "patched": true,
+            "location": null
+          },
+          "z": {
+            "raw": "dh160.26.38",
+            "node": "DH160",
+            "nodeInferred": false,
+            "rack": 26,
+            "unit": 38,
+            "role": null,
+            "cassette": "C",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "dh160.26.38",
+              "node": "DH160",
+              "rack": 26,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH160"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        }
+      ]
+    },
+    {
+      "id": "XID0426-448933802@24",
+      "csvLine": 24,
+      "label": "XID0426/ 448933802",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": "dh160.1.38",
+      "nokiaPort": "C22",
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU22",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 22,
+            "role": null,
+            "cassette": "B",
+            "port": "21/22",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU22",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 22,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R33.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 4,
+            "role": null,
+            "cassette": "B",
+            "port": "21/22",
+            "patched": true,
+            "location": {
+              "raw": "DH151.R33.RU4",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": {
+            "raw": "DH151 CAB33 RU05",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 5,
+            "role": null,
+            "cassette": "D",
+            "port": "11/12",
+            "patched": true,
+            "location": {
+              "raw": "DH151 CAB33 RU05",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 5,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "z": {
+            "raw": "dh120.266.32",
+            "node": "DH120",
+            "nodeInferred": false,
+            "rack": 266,
+            "unit": 32,
+            "role": null,
+            "cassette": "D",
+            "port": "11/12",
+            "patched": true,
+            "location": {
+              "raw": "dh120.266.32",
+              "node": "DH120",
+              "rack": 266,
+              "unit": 32,
+              "role": null,
+              "alpha": "DH120"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": {
+            "raw": "",
+            "node": "DH120",
+            "nodeInferred": true,
+            "rack": null,
+            "unit": null,
+            "role": null,
+            "cassette": "A",
+            "port": "11/12",
+            "patched": true,
+            "location": null
+          },
+          "z": {
+            "raw": "dh160.26.38",
+            "node": "DH160",
+            "nodeInferred": false,
+            "rack": 26,
+            "unit": 38,
+            "role": null,
+            "cassette": "C",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "dh160.26.38",
+              "node": "DH160",
+              "rack": 26,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH160"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        }
+      ]
+    },
+    {
+      "id": "XID0464-449355679@25",
+      "csvLine": 25,
+      "label": "XID0464 / 449355679",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU22",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 22,
+            "role": null,
+            "cassette": "B",
+            "port": "23/24",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU22",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 22,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R33.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 33,
+            "unit": 4,
+            "role": null,
+            "cassette": "B",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R33.RU4",
+              "node": "DH151",
+              "rack": 33,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "OPEN@27",
+      "csvLine": 27,
+      "label": "OPEN",
+      "unlabelled": false,
+      "isSpare": true,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "A",
+            "port": "1/2",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R34.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 4,
+            "role": null,
+            "cassette": null,
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R34.RU4",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OPEN",
+          "derivedStatus": "INVESTIGATE"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "OPEN@28",
+      "csvLine": 28,
+      "label": "OPEN",
+      "unlabelled": false,
+      "isSpare": true,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "A",
+            "port": "3/4",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R34.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 4,
+            "role": null,
+            "cassette": null,
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R34.RU4",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OPEN",
+          "derivedStatus": "INVESTIGATE"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "XID0428-448925563@29",
+      "csvLine": 29,
+      "label": "XID0428/ 448925563",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": "dh160.2.38",
+      "nokiaPort": "C17",
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "A",
+            "port": "5/6",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R34.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 4,
+            "role": null,
+            "cassette": "A",
+            "port": "5/6",
+            "patched": true,
+            "location": {
+              "raw": "DH151.R34.RU4",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OPEN",
+          "derivedStatus": "INVESTIGATE"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": {
+            "raw": "dh120.266.38",
+            "node": "DH120",
+            "nodeInferred": false,
+            "rack": 266,
+            "unit": 38,
+            "role": null,
+            "cassette": "D",
+            "port": "1/2",
+            "patched": true,
+            "location": {
+              "raw": "dh120.266.38",
+              "node": "DH120",
+              "rack": 266,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH120"
+            }
+          },
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": {
+            "raw": "",
+            "node": "DH120",
+            "nodeInferred": true,
+            "rack": null,
+            "unit": null,
+            "role": null,
+            "cassette": "B",
+            "port": "1/2",
+            "patched": true,
+            "location": null
+          },
+          "z": {
+            "raw": "dh160.26.38",
+            "node": "DH160",
+            "nodeInferred": false,
+            "rack": 26,
+            "unit": 38,
+            "role": null,
+            "cassette": "D",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "dh160.26.38",
+              "node": "DH160",
+              "rack": 26,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH160"
+            }
+          },
+          "complete": true,
+          "occupancy": "OPEN",
+          "derivedStatus": "INVESTIGATE"
+        }
+      ]
+    },
+    {
+      "id": "XID0429-448926733@30",
+      "csvLine": 30,
+      "label": "XID0429/ 448926733",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": "dh160.2.38",
+      "nokiaPort": "C18",
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "A",
+            "port": "7/8",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R34.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 4,
+            "role": null,
+            "cassette": "A",
+            "port": "7/8",
+            "patched": true,
+            "location": {
+              "raw": "DH151.R34.RU4",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OPEN",
+          "derivedStatus": "INVESTIGATE"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": {
+            "raw": "dh120.266.38",
+            "node": "DH120",
+            "nodeInferred": false,
+            "rack": 266,
+            "unit": 38,
+            "role": null,
+            "cassette": "D",
+            "port": "3/4",
+            "patched": true,
+            "location": {
+              "raw": "dh120.266.38",
+              "node": "DH120",
+              "rack": 266,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH120"
+            }
+          },
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": {
+            "raw": "",
+            "node": "DH120",
+            "nodeInferred": true,
+            "rack": null,
+            "unit": null,
+            "role": null,
+            "cassette": "B",
+            "port": "3/4",
+            "patched": true,
+            "location": null
+          },
+          "z": {
+            "raw": "dh160.26.38",
+            "node": "DH160",
+            "nodeInferred": false,
+            "rack": 26,
+            "unit": 38,
+            "role": null,
+            "cassette": "D",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "dh160.26.38",
+              "node": "DH160",
+              "rack": 26,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH160"
+            }
+          },
+          "complete": true,
+          "occupancy": "OPEN",
+          "derivedStatus": "INVESTIGATE"
+        }
+      ]
+    },
+    {
+      "id": "XID0430-448926734@31",
+      "csvLine": 31,
+      "label": "XID0430/ 448926734",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": "dh160.2.38",
+      "nokiaPort": "C19",
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "A",
+            "port": "9/10",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R34.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 4,
+            "role": null,
+            "cassette": "A",
+            "port": "9/10",
+            "patched": true,
+            "location": {
+              "raw": "DH151.R34.RU4",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": {
+            "raw": "dh120.266.38",
+            "node": "DH120",
+            "nodeInferred": false,
+            "rack": 266,
+            "unit": 38,
+            "role": null,
+            "cassette": "D",
+            "port": "5/6",
+            "patched": true,
+            "location": {
+              "raw": "dh120.266.38",
+              "node": "DH120",
+              "rack": 266,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH120"
+            }
+          },
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": {
+            "raw": "",
+            "node": "DH120",
+            "nodeInferred": true,
+            "rack": null,
+            "unit": null,
+            "role": null,
+            "cassette": "B",
+            "port": "5/6",
+            "patched": true,
+            "location": null
+          },
+          "z": {
+            "raw": "dh160.26.38",
+            "node": "DH160",
+            "nodeInferred": false,
+            "rack": 26,
+            "unit": 38,
+            "role": null,
+            "cassette": "D",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "dh160.26.38",
+              "node": "DH160",
+              "rack": 26,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH160"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        }
+      ]
+    },
+    {
+      "id": "XID0431-448926735@32",
+      "csvLine": 32,
+      "label": "XID0431/ 448926735",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": "dh160.2.38",
+      "nokiaPort": "C20",
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "A",
+            "port": "11/12",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151 CAB34 RU40",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 40,
+            "role": null,
+            "cassette": "A",
+            "port": "11/12",
+            "patched": true,
+            "location": {
+              "raw": "DH151 CAB34 RU40",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 40,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "UNKNOWN",
+          "derivedStatus": "INVESTIGATE"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": {
+            "raw": "dh120.266.38",
+            "node": "DH120",
+            "nodeInferred": false,
+            "rack": 266,
+            "unit": 38,
+            "role": null,
+            "cassette": "D",
+            "port": "7/8",
+            "patched": true,
+            "location": {
+              "raw": "dh120.266.38",
+              "node": "DH120",
+              "rack": 266,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH120"
+            }
+          },
+          "complete": false,
+          "occupancy": "UNKNOWN",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": {
+            "raw": "",
+            "node": "DH120",
+            "nodeInferred": true,
+            "rack": null,
+            "unit": null,
+            "role": null,
+            "cassette": "B",
+            "port": "7/8",
+            "patched": true,
+            "location": null
+          },
+          "z": {
+            "raw": "dh160.26.38",
+            "node": "DH160",
+            "nodeInferred": false,
+            "rack": 26,
+            "unit": 38,
+            "role": null,
+            "cassette": "D",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "dh160.26.38",
+              "node": "DH160",
+              "rack": 26,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH160"
+            }
+          },
+          "complete": true,
+          "occupancy": "UNKNOWN",
+          "derivedStatus": "INVESTIGATE"
+        }
+      ]
+    },
+    {
+      "id": "lumen-448338555@33",
+      "csvLine": 33,
+      "label": "lumen/448338555",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": "dh160.1.28",
+      "nokiaPort": "c35",
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "A",
+            "port": "11/12",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151 CAB34 RU40 MMR",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 40,
+            "role": "MMR",
+            "cassette": "A",
+            "port": "21/22",
+            "patched": true,
+            "location": {
+              "raw": "DH151 CAB34 RU40 MMR",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 40,
+              "role": "MMR",
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "UNKNOWN",
+          "derivedStatus": "INVESTIGATE"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": {
+            "raw": "DH120.R10.U43",
+            "node": "DH120",
+            "nodeInferred": false,
+            "rack": 10,
+            "unit": 43,
+            "role": null,
+            "cassette": "C",
+            "port": "21/22",
+            "patched": true,
+            "location": {
+              "raw": "DH120.R10.U43",
+              "node": "DH120",
+              "rack": 10,
+              "unit": 43,
+              "role": null,
+              "alpha": "DH120"
+            }
+          },
+          "complete": false,
+          "occupancy": "UNKNOWN",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": {
+            "raw": "",
+            "node": "DH120",
+            "nodeInferred": true,
+            "rack": null,
+            "unit": null,
+            "role": null,
+            "cassette": "A",
+            "port": "17/18",
+            "patched": true,
+            "location": null
+          },
+          "z": {
+            "raw": "dh160.26.38",
+            "node": "DH160",
+            "nodeInferred": false,
+            "rack": 26,
+            "unit": 38,
+            "role": null,
+            "cassette": "A",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "dh160.26.38",
+              "node": "DH160",
+              "rack": 26,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH160"
+            }
+          },
+          "complete": true,
+          "occupancy": "UNKNOWN",
+          "derivedStatus": "INVESTIGATE"
+        }
+      ]
+    },
+    {
+      "id": "XID0465-449355683@34",
+      "csvLine": 34,
+      "label": "XID0465 / 449355683",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "A",
+            "port": "13/14",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R34.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 4,
+            "role": null,
+            "cassette": null,
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R34.RU4",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "XID0466-449355681@35",
+      "csvLine": 35,
+      "label": "XID0466 / 449355681",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "A",
+            "port": "15/16",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R34.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 4,
+            "role": null,
+            "cassette": null,
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R34.RU4",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "XID0467-449355664@36",
+      "csvLine": 36,
+      "label": "XID0467 / 449355664",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "A",
+            "port": "17/18",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R34.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 4,
+            "role": null,
+            "cassette": null,
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R34.RU4",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "XID0468-449355678@37",
+      "csvLine": 37,
+      "label": "XID0468 / 449355678",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "A",
+            "port": "19/20",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R34.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 4,
+            "role": null,
+            "cassette": null,
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R34.RU4",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "XID0469-449355677@38",
+      "csvLine": 38,
+      "label": "XID0469 / 449355677",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "A",
+            "port": "21/22",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R34.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 4,
+            "role": null,
+            "cassette": null,
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R34.RU4",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "XID0470-449355682@39",
+      "csvLine": 39,
+      "label": "XID0470 / 449355682",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "A",
+            "port": "23/24",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R34.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 4,
+            "role": null,
+            "cassette": null,
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R34.RU4",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "XID0471-449355680@40",
+      "csvLine": 40,
+      "label": "XID0471 / 449355680",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "B",
+            "port": "1/2",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R34.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 4,
+            "role": null,
+            "cassette": null,
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R34.RU4",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "XID0367-447874990@41",
+      "csvLine": 41,
+      "label": "XID0367 / 447874990",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "B",
+            "port": "3/4",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R34.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 4,
+            "role": null,
+            "cassette": null,
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R34.RU4",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "UP"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OCCUPIED",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "OPEN@42",
+      "csvLine": 42,
+      "label": "OPEN",
+      "unlabelled": false,
+      "isSpare": true,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "B",
+            "port": "5/6",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R34.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 4,
+            "role": null,
+            "cassette": null,
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R34.RU4",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OPEN",
+          "derivedStatus": "INVESTIGATE"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "OPEN@43",
+      "csvLine": 43,
+      "label": "OPEN",
+      "unlabelled": false,
+      "isSpare": true,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "B",
+            "port": "7/8",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R34.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 4,
+            "role": null,
+            "cassette": null,
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R34.RU4",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OPEN",
+          "derivedStatus": "INVESTIGATE"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "OPEN@44",
+      "csvLine": 44,
+      "label": "OPEN",
+      "unlabelled": false,
+      "isSpare": true,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "B",
+            "port": "9/10",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R34.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 4,
+            "role": null,
+            "cassette": null,
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R34.RU4",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OPEN",
+          "derivedStatus": "INVESTIGATE"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "OPEN@45",
+      "csvLine": 45,
+      "label": "OPEN",
+      "unlabelled": false,
+      "isSpare": true,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "B",
+            "port": "11/12",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R34.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 4,
+            "role": null,
+            "cassette": null,
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R34.RU4",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OPEN",
+          "derivedStatus": "INVESTIGATE"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "OPEN@46",
+      "csvLine": 46,
+      "label": "OPEN",
+      "unlabelled": false,
+      "isSpare": true,
+      "isCondemned": false,
+      "location": "dh160.2.38",
+      "nokiaPort": "C21",
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "B",
+            "port": "13/14",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151 CAB34 RU40",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 40,
+            "role": null,
+            "cassette": "A",
+            "port": "13/14",
+            "patched": true,
+            "location": {
+              "raw": "DH151 CAB34 RU40",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 40,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OPEN",
+          "derivedStatus": "INVESTIGATE"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": {
+            "raw": "dh120.266.38",
+            "node": "DH120",
+            "nodeInferred": false,
+            "rack": 266,
+            "unit": 38,
+            "role": null,
+            "cassette": "D",
+            "port": "9/10",
+            "patched": true,
+            "location": {
+              "raw": "dh120.266.38",
+              "node": "DH120",
+              "rack": 266,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH120"
+            }
+          },
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": {
+            "raw": "",
+            "node": "DH120",
+            "nodeInferred": true,
+            "rack": null,
+            "unit": null,
+            "role": null,
+            "cassette": "B",
+            "port": "9/10",
+            "patched": true,
+            "location": null
+          },
+          "z": {
+            "raw": "dh160.26.38",
+            "node": "DH160",
+            "nodeInferred": false,
+            "rack": 26,
+            "unit": 38,
+            "role": null,
+            "cassette": "D",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "dh160.26.38",
+              "node": "DH160",
+              "rack": 26,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH160"
+            }
+          },
+          "complete": true,
+          "occupancy": "OPEN",
+          "derivedStatus": "INVESTIGATE"
+        }
+      ]
+    },
+    {
+      "id": "OPEN@47",
+      "csvLine": 47,
+      "label": "OPEN",
+      "unlabelled": false,
+      "isSpare": true,
+      "isCondemned": false,
+      "location": "dh160.2.38",
+      "nokiaPort": "C22",
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "B",
+            "port": "15/16",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151 CAB34 RU40",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 40,
+            "role": null,
+            "cassette": "A",
+            "port": "15/16",
+            "patched": true,
+            "location": {
+              "raw": "DH151 CAB34 RU40",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 40,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OPEN",
+          "derivedStatus": "INVESTIGATE"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": {
+            "raw": "dh120.266.38",
+            "node": "DH120",
+            "nodeInferred": false,
+            "rack": 266,
+            "unit": 38,
+            "role": null,
+            "cassette": "D",
+            "port": "11/12",
+            "patched": true,
+            "location": {
+              "raw": "dh120.266.38",
+              "node": "DH120",
+              "rack": 266,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH120"
+            }
+          },
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": {
+            "raw": "",
+            "node": "DH120",
+            "nodeInferred": true,
+            "rack": null,
+            "unit": null,
+            "role": null,
+            "cassette": "B",
+            "port": "11/12",
+            "patched": true,
+            "location": null
+          },
+          "z": {
+            "raw": "dh160.26.38",
+            "node": "DH160",
+            "nodeInferred": false,
+            "rack": 26,
+            "unit": 38,
+            "role": null,
+            "cassette": "D",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "dh160.26.38",
+              "node": "DH160",
+              "rack": 26,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH160"
+            }
+          },
+          "complete": true,
+          "occupancy": "OPEN",
+          "derivedStatus": "INVESTIGATE"
+        }
+      ]
+    },
+    {
+      "id": "OPEN@48",
+      "csvLine": 48,
+      "label": "OPEN",
+      "unlabelled": false,
+      "isSpare": true,
+      "isCondemned": false,
+      "location": "dh160.2.38",
+      "nokiaPort": "C23",
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "B",
+            "port": "17/18",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151 CAB34 RU40",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 40,
+            "role": null,
+            "cassette": "A",
+            "port": "17/18",
+            "patched": true,
+            "location": {
+              "raw": "DH151 CAB34 RU40",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 40,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OPEN",
+          "derivedStatus": "INVESTIGATE"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": {
+            "raw": "dh120.266.38",
+            "node": "DH120",
+            "nodeInferred": false,
+            "rack": 266,
+            "unit": 38,
+            "role": null,
+            "cassette": "D",
+            "port": "13/14",
+            "patched": true,
+            "location": {
+              "raw": "dh120.266.38",
+              "node": "DH120",
+              "rack": 266,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH120"
+            }
+          },
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": {
+            "raw": "",
+            "node": "DH120",
+            "nodeInferred": true,
+            "rack": null,
+            "unit": null,
+            "role": null,
+            "cassette": "B",
+            "port": "13/14",
+            "patched": true,
+            "location": null
+          },
+          "z": {
+            "raw": "dh160.26.38",
+            "node": "DH160",
+            "nodeInferred": false,
+            "rack": 26,
+            "unit": 38,
+            "role": null,
+            "cassette": "D",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "dh160.26.38",
+              "node": "DH160",
+              "rack": 26,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH160"
+            }
+          },
+          "complete": true,
+          "occupancy": "OPEN",
+          "derivedStatus": "INVESTIGATE"
+        }
+      ]
+    },
+    {
+      "id": "OPEN@49",
+      "csvLine": 49,
+      "label": "OPEN",
+      "unlabelled": false,
+      "isSpare": true,
+      "isCondemned": false,
+      "location": "dh160.2.38",
+      "nokiaPort": "C24",
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "B",
+            "port": "19/20",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151 CAB34 RU40",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 40,
+            "role": null,
+            "cassette": "A",
+            "port": "19/20",
+            "patched": true,
+            "location": {
+              "raw": "DH151 CAB34 RU40",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 40,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OPEN",
+          "derivedStatus": "INVESTIGATE"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": {
+            "raw": "dh120.266.38",
+            "node": "DH120",
+            "nodeInferred": false,
+            "rack": 266,
+            "unit": 38,
+            "role": null,
+            "cassette": "D",
+            "port": "15/16",
+            "patched": true,
+            "location": {
+              "raw": "dh120.266.38",
+              "node": "DH120",
+              "rack": 266,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH120"
+            }
+          },
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": {
+            "raw": "",
+            "node": "DH120",
+            "nodeInferred": true,
+            "rack": null,
+            "unit": null,
+            "role": null,
+            "cassette": "B",
+            "port": "15/16",
+            "patched": true,
+            "location": null
+          },
+          "z": {
+            "raw": "dh160.26.38",
+            "node": "DH160",
+            "nodeInferred": false,
+            "rack": 26,
+            "unit": 38,
+            "role": null,
+            "cassette": "D",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "dh160.26.38",
+              "node": "DH160",
+              "rack": 26,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH160"
+            }
+          },
+          "complete": true,
+          "occupancy": "OPEN",
+          "derivedStatus": "INVESTIGATE"
+        }
+      ]
+    },
+    {
+      "id": "OPEN@50",
+      "csvLine": 50,
+      "label": "OPEN",
+      "unlabelled": false,
+      "isSpare": true,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "B",
+            "port": "21/22",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R34.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 4,
+            "role": null,
+            "cassette": null,
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R34.RU4",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OPEN",
+          "derivedStatus": "INVESTIGATE"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "OPEN@51",
+      "csvLine": 51,
+      "label": "OPEN",
+      "unlabelled": false,
+      "isSpare": true,
+      "isCondemned": false,
+      "location": null,
+      "nokiaPort": null,
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR164.R5.RU16",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": 5,
+            "unit": 16,
+            "role": null,
+            "cassette": "B",
+            "port": "23/24",
+            "patched": true,
+            "location": {
+              "raw": "MMR164.R5.RU16",
+              "node": "MMR",
+              "rack": 5,
+              "unit": 16,
+              "role": null,
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151.R34.RU4",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 4,
+            "role": null,
+            "cassette": null,
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "DH151.R34.RU4",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 4,
+              "role": null,
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "OPEN",
+          "derivedStatus": "INVESTIGATE"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": null,
+          "z": null,
+          "complete": false,
+          "occupancy": "OPEN",
+          "derivedStatus": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "OUYX-421081-ZYO@62",
+      "csvLine": 62,
+      "label": "OUYX/421081//ZYO",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": "dh160.1.28",
+      "nokiaPort": "c36",
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR CW PP",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": null,
+            "unit": null,
+            "role": "CW PP",
+            "cassette": null,
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "MMR CW PP",
+              "node": "MMR",
+              "rack": null,
+              "unit": null,
+              "role": "CW PP",
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151 CAB34 RU40 MMR",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 40,
+            "role": "MMR",
+            "cassette": "A",
+            "port": "17/18",
+            "patched": true,
+            "location": {
+              "raw": "DH151 CAB34 RU40 MMR",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 40,
+              "role": "MMR",
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "UNKNOWN",
+          "derivedStatus": "INVESTIGATE"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": {
+            "raw": "DH120.R10.U43",
+            "node": "DH120",
+            "nodeInferred": false,
+            "rack": 10,
+            "unit": 43,
+            "role": null,
+            "cassette": "C",
+            "port": "15/16",
+            "patched": true,
+            "location": {
+              "raw": "DH120.R10.U43",
+              "node": "DH120",
+              "rack": 10,
+              "unit": 43,
+              "role": null,
+              "alpha": "DH120"
+            }
+          },
+          "complete": false,
+          "occupancy": "UNKNOWN",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": {
+            "raw": "",
+            "node": "DH120",
+            "nodeInferred": true,
+            "rack": null,
+            "unit": null,
+            "role": null,
+            "cassette": "A",
+            "port": "13/14",
+            "patched": true,
+            "location": null
+          },
+          "z": {
+            "raw": "dh160.26.38",
+            "node": "DH160",
+            "nodeInferred": false,
+            "rack": 26,
+            "unit": 38,
+            "role": null,
+            "cassette": "A",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "dh160.26.38",
+              "node": "DH160",
+              "rack": 26,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH160"
+            }
+          },
+          "complete": true,
+          "occupancy": "UNKNOWN",
+          "derivedStatus": "INVESTIGATE"
+        }
+      ]
+    },
+    {
+      "id": "OUYX-421082-ZYO@63",
+      "csvLine": 63,
+      "label": "OUYX/421082//ZYO",
+      "unlabelled": false,
+      "isSpare": false,
+      "isCondemned": false,
+      "location": "dh160.2.28",
+      "nokiaPort": "c35",
+      "notes": null,
+      "hops": [
+        {
+          "id": "MMR-151",
+          "from": "MMR",
+          "to": "DH151",
+          "a": {
+            "raw": "MMR CW PP",
+            "node": "MMR",
+            "nodeInferred": false,
+            "rack": null,
+            "unit": null,
+            "role": "CW PP",
+            "cassette": null,
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "MMR CW PP",
+              "node": "MMR",
+              "rack": null,
+              "unit": null,
+              "role": "CW PP",
+              "alpha": "MMR"
+            }
+          },
+          "z": {
+            "raw": "DH151 CAB34 RU40 MMR",
+            "node": "DH151",
+            "nodeInferred": false,
+            "rack": 34,
+            "unit": 40,
+            "role": "MMR",
+            "cassette": "A",
+            "port": "19/20",
+            "patched": true,
+            "location": {
+              "raw": "DH151 CAB34 RU40 MMR",
+              "node": "DH151",
+              "rack": 34,
+              "unit": 40,
+              "role": "MMR",
+              "alpha": "DH151"
+            }
+          },
+          "complete": true,
+          "occupancy": "UNKNOWN",
+          "derivedStatus": "INVESTIGATE"
+        },
+        {
+          "id": "151-120",
+          "from": "DH151",
+          "to": "DH120",
+          "a": null,
+          "z": {
+            "raw": "DH120.R10.U43",
+            "node": "DH120",
+            "nodeInferred": false,
+            "rack": 10,
+            "unit": 43,
+            "role": null,
+            "cassette": "C",
+            "port": "17/18",
+            "patched": true,
+            "location": {
+              "raw": "DH120.R10.U43",
+              "node": "DH120",
+              "rack": 10,
+              "unit": 43,
+              "role": null,
+              "alpha": "DH120"
+            }
+          },
+          "complete": false,
+          "occupancy": "UNKNOWN",
+          "derivedStatus": "NOT_RUN"
+        },
+        {
+          "id": "120-160",
+          "from": "DH120",
+          "to": "DH160",
+          "a": {
+            "raw": "",
+            "node": "DH120",
+            "nodeInferred": true,
+            "rack": null,
+            "unit": null,
+            "role": null,
+            "cassette": "A",
+            "port": "15/16",
+            "patched": true,
+            "location": null
+          },
+          "z": {
+            "raw": "dh160.26.38",
+            "node": "DH160",
+            "nodeInferred": false,
+            "rack": 26,
+            "unit": 38,
+            "role": null,
+            "cassette": "A",
+            "port": null,
+            "patched": true,
+            "location": {
+              "raw": "dh160.26.38",
+              "node": "DH160",
+              "rack": 26,
+              "unit": 38,
+              "role": null,
+              "alpha": "DH160"
+            }
+          },
+          "complete": true,
+          "occupancy": "UNKNOWN",
+          "derivedStatus": "INVESTIGATE"
+        }
+      ]
+    }
+  ]
+}

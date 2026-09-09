@@ -67,10 +67,12 @@ export const OCCUPANCY_LABELS = {
 /**
  * Route a hop between two anchors.
  *
- * This is the "train track switch" behaviour: the path is computed from the
- * hop's ACTUAL endpoint nodes every render. Re-patch a circuit to a different
- * hall in the cutsheet and the drawn line follows it, because nothing here is
- * a hardcoded line between two fixed icons -- `from`/`to` come from the data.
+ * The path is computed from the hop's ACTUAL endpoint nodes every render.
+ * Re-patch a circuit to a different hall in the cutsheet and the drawn line
+ * follows it, because nothing here is a hardcoded line between two fixed
+ * icons -- `from`/`to` come from the data. See fiber-run-terminology.md's
+ * "Note on routing behavior" for why this is described in plain terms rather
+ * than a topology-sounding nickname.
  *
  * Returns an SVG path string, or null when either endpoint is unknown.
  */
