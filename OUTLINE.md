@@ -3,6 +3,7 @@
 ## Setup
 Git level: 4 (local git + GitHub)
 Blast radius: hosting third-party (GitHub) — deliberate choice, confirmed. Revisit per-workstream if a future workstream's source files are more sensitive than what's here today (current data — floorplans, cutsheets, a scoped Jira token behind a backend proxy — was reviewed and judged acceptable for GitHub).
+Autonomy level: 2 (target policy — changes applied directly, committed somewhere easy to review after the fact and trivially reversible, no per-change approval required). **Not yet mechanically true**: this Claude Project has no direct filesystem/git access, so every change is still drafted content Leo applies manually (effectively level 0 in practice). Level 2 becomes real once work moves to Claude Code against the actual cloned repo — that move is planned, not yet done. Until then, treat this as the intended target, not the current behavior.
 
 ## Goal
 A single umbrella project ("one-stop-shop") housing independent internal tools for the PHX01 site floor, each built as its own workstream, occasionally combined once real overlaps emerge. These are floor tools — real usability on mobile devices (not just desktop/laptop) is part of the goal, not an afterthought; see the Mobile integration backlog item for current status.
