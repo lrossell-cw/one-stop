@@ -4,6 +4,9 @@ Structural and cross-cutting changes only — new workstreams added, repo restru
 
 ---
 
+## 2026-09-10 (4)
+- Promoted **hosting** from backlog to active workstream — created `workstreams/hosting/` with README.md, STATUS.md, CHANGELOG.md. This is the immediate next workstream to work on, with Mobile integration queued directly behind it once hosting resolves.
+
 ## 2026-09-10 (3)
 - Updated root `OUTLINE.md`'s Goal statement to explicitly name mobile usability as part of the project's goal, not an afterthought — these are floor tools, not desktop tools.
 - Added **Mobile integration** to the backlog, sequenced after Hosting (real HTTPS mobile access depends on where workstreams actually deploy). Current plan is Canvas in the CoreWeave workspace, matching Hosting's own status — not yet confirmed, prioritized early because Leo wants on-device testing sooner rather than later.
